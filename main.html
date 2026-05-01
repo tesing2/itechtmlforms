@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Forms Complete Practice</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    margin:0;
+    padding:20px;
+}
+.container{
+    max-width:800px;
+    background:white;
+    padding:25px;
+    margin:auto;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1{
+    text-align:center;
+}
+fieldset{
+    margin-bottom:20px;
+    padding:15px;
+}
+label{
+    display:block;
+    margin-top:10px;
+}
+input, select, textarea{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+}
+.inline{
+    width:auto;
+}
+button{
+    padding:10px 20px;
+    margin-top:10px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Complete HTML Form Practice</h1>
+
+<form action="main.html" method="post" autocomplete="on">
+
+<!-- PERSONAL INFO -->
+<fieldset>
+<legend>Personal Information</legend>
+
+<label for="fname">First Name</label>
+<input type="text" id="fname" name="fname" placeholder="Enter first name" required autofocus>
+
+<label for="lname">Last Name</label>
+<input type="text" id="lname" name="lname" placeholder="Enter last name" required>
+
+<label for="email">Email</label>
+<input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+
+<label for="password">Password</label>
+<input type="password" id="password" name="password" maxlength="12" required>
+
+<label for="age">Age</label>
+<input type="number" id="age" name="age" min="1" max="100">
+
+<label for="birthday">Birthday</label>
+<input type="date" id="birthday" name="birthday">
+
+<label for="phone">Phone Number</label>
+<input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="11 digits">
+
+</fieldset>
+
+<!-- RADIO -->
+<fieldset>
+<legend>Gender</legend>
+
+<input class="inline" type="radio" id="male" name="gender" value="Male">
+<label class="inline" for="male">Male</label>
+
+<input class="inline" type="radio" id="female" name="gender" value="Female">
+<label class="inline" for="female">Female</label>
+
+<input class="inline" type="radio" id="other" name="gender" value="Other">
+<label class="inline" for="other">Other</label>
+
+</fieldset>
+
+<!-- CHECKBOX -->
+<fieldset>
+<legend>Hobbies</legend>
+
+<input class="inline" type="checkbox" name="hobby1" value="Gaming">
+<label class="inline">Gaming</label>
+
+<input class="inline" type="checkbox" name="hobby2" value="Music">
+<label class="inline">Music</label>
+
+<input class="inline" type="checkbox" name="hobby3" value="Sports">
+<label class="inline">Sports</label>
+
+<input class="inline" type="checkbox" name="hobby4" value="Coding">
+<label class="inline">Coding</label>
+
+</fieldset>
+
+<!-- SELECT -->
+<fieldset>
+<legend>Country</legend>
+
+<label for="country">Choose Country</label>
+<select id="country" name="country">
+<option value="">Select</option>
+<option>Philippines</option>
+<option>Japan</option>
+<option>USA</option>
+<option>Canada</option>
+</select>
+
+</fieldset>
+
+<!-- MULTIPLE SELECT -->
+<fieldset>
+<legend>Favorite Subjects</legend>
+
+<select name="subjects" size="4" multiple>
+<option>Math</option>
+<option>Science</option>
+<option>English</option>
+<option>Programming</option>
+</select>
+
+</fieldset>
+
+<!-- TEXTAREA -->
+<fieldset>
+<legend>Feedback</legend>
+
+<label for="msg">Message</label>
+<textarea id="msg" name="msg" rows="5" cols="40" placeholder="Type here..."></textarea>
+
+</fieldset>
+
+<!-- DATALIST -->
+<fieldset>
+<legend>Favorite Browser</legend>
+
+<input list="browsers" name="browser">
+
+<datalist id="browsers">
+<option value="Chrome">
+<option value="Edge">
+<option value="Firefox">
+<option value="Safari">
+</datalist>
+
+</fieldset>
+
+<!-- READONLY / DISABLED -->
+<fieldset>
+<legend>Extra Inputs</legend>
+
+<label>Readonly</label>
+<input type="text" value="Cannot edit this" readonly>
+
+<label>Disabled</label>
+<input type="text" value="Disabled field" disabled>
+
+</fieldset>
+
+<!-- RANGE -->
+<fieldset>
+<legend>Rate Yourself</legend>
+
+<label for="rate">Skill Level</label>
+<input type="range" id="rate" name="rate" min="0" max="10" step="1">
+
+</fieldset>
+
+<!-- FILE -->
+<fieldset>
+<legend>Upload File</legend>
+
+<input type="file" name="file" multiple>
+
+</fieldset>
+
+<!-- BUTTONS -->
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+<button type="button" onclick="alert('Hello!')">Click Me</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
